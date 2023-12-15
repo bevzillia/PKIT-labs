@@ -1,0 +1,14 @@
+[Unit]
+Description=Made by Illia Bevz
+Requires=network.target
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=java -jar /opt/sample/service.jar
+User=bevz-illia
+Restart=on-failure
+RestartSec=10
+Environment="PORT=8081"
